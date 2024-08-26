@@ -1,12 +1,13 @@
 const express = require('express');
 
-const port = 6500;
+const { serverConfig } = require('./config/index');
+
 const app = express();
 
 (async function setupAndRunServer() {
     app.listen(function(err) {
         if(!err){
-            console.log(`sevrer is running fine on port:  ${port}`)
+            console.log(`sevrer is running fine on port:  ${serverConfig.PORT}`)
         }
     })
 })()
